@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат с Мэри</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .chat-box {
+            height: 100%;
+            overflow-y: scroll;
+        }
+        .chat-message {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .user {
+            text-align: right;
+        }
+        .user .chat-message {
+            background-color: #f0f0f0;
+        }
+        .mary {
+            text-align: left;
+        }
+        .mary .chat-message {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-box">
+        {% for pair in history %}
+            <div class="user">
+                <div class="chat-message">{{ pair.question }}</div>
+            </div>
+            <div class="mary">
+                <div class="chat-message">{{ pair.answer }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
