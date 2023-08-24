@@ -1,0 +1,22 @@
+<body>
+<style>
+  .chat-form {
+    position: fixed; /* или sticky */
+    bottom: 0; /* прикрепить форму к нижнему краю */
+    width: 100%; /* занять всю ширину окна */
+    background-color: white; /* задать фоновый цвет */
+  }
+</style>
+
+<iframe src="/chat" width="500" height="400"></iframe> <!-- Добавь тег iframe -->
+
+
+<div class="card-footer chat-form"> <!-- Добавь атрибут class -->
+  <form id="chat_form" method="POST">
+    <input type="text" name="question" id="question" class="form-control" placeholder="Введите вопрос">
+    <button class="btn btn-primary" id="message" name="message" type="submit">
+      <i class="far fa-paper-plane">Отправить</i>
+    </button>
+  </form>
+</div>
+</body>
